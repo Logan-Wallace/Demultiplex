@@ -12,8 +12,10 @@
 
 2. Per-base NT distribution
     i. Use markdown to insert your 4 histograms here.
-    "Read 2"
+    
+    #Read 2
     ![Read2](https://user-images.githubusercontent.com/107602241/181381885-34874444-e5a8-485c-ac10-a0623de47bd3.png)
+    
     "Read 3"
     ![Read3](https://user-images.githubusercontent.com/107602241/181381905-73152b12-b336-4120-8965-90df199fb039.png)
     
@@ -35,8 +37,8 @@
 ## Part 2
 1. Define the problem:
 2. Describe output:
-3. Upload your [4 input FASTQ files](../TEST-input_FASTQ) and your [>=6 expected output FASTQ files](../TEST-output_FASTQ).
-4. Pseudocode
+3. Upload your [4 input FASTQ files](../TEST-input_FASTQ) and your [>=6 expected output FASTQ files](../TEST-output_FASTQ):
+4. Pseudocode:
 5. High level functions. For each function, be sure to include:
     1. Description/doc string
     2. Function headers (name and parameters)
