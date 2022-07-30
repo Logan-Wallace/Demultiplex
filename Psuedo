@@ -1,0 +1,97 @@
+- Psuedocode for Demultiplexing.py -
+
+Logan Wallace
+
+7/29/2022
+
+Biology 622
+-------------------
+What's the problem?
+-------------------
+We've got four fastq files with read data at either 101bp (biological reads) or 8bp (index reads) that consist of several hundred million lines each.
+These reads have been indexed using a list of 24 barcodes. Our goal is to demultiplex this data (separate by index) along the way identifying the number of hopped, 
+unknown and matched index reads while making sure that we maintain a quality standard for our data. 
+-------
+Outline 
+-------
+-We will need to open all 4 fastq files 
+-We are going to need to open files to write to. First 6 files to write matched, unmatched and hopped reads to from each of R1 and R4 (biological reads). We will end 
+with 52 files, because the 2 fastq files for matched reads of R1 and R4 each contain 24 separate libraries that we will divide into 24 files. 
+-Now we need to run through each record and first determine if the barcode reads meet the quality standards we have set. 33 for index, 30 for biological reads. Because 
+we already have the record open, we should check and see if the biological reads meet there standard as well.
+
+Succinctly
+1. Open input fastq files
+2. Open files to write to
+3. Loop through all four input fastq files simultaneously
+    Does the index meet minimum quality?
+    Does the biological read meet minimum quality?
+    Are the index matched or unmatched?
+    Output to appropriate fastq (1/6) with appended header
+4. Loop through each of R1/R2 'matched' fastq files
+    Using the barcode information in the header, write out to one of 48 final fastq files. 
+    
+------
+Output
+------
+Absolutely necessary;
+52 Fastq files
+Number of read-pairs with indices that; match, were hopped or failed (note to add in a counter for each of these otherwise we'll have to do wc on our output fastqs, bleh)
+
+Just plain useful;
+Some nice print statements to let us know that the code is running on the massive (or test) files. 
+
+
+---------
+Functions
+---------
+
+def a_function(inputs) -> outputs: 
+    '''docstring'''
+    (psuedo)code
+    tests
+    return
+
+def matched_hopped(str, str) -> boolean:
+    '''This function will take in the index read sequences from reads 2 and 3 and tell us whether they are matched or hopped'''
+    if the barcodes match then True, otherwise this is false. 
+    tests: did we get two, non-empty strings? AAAATTTT == AAAATTTT (because reverse complement)
+    return boolean value (True/False)
+
+def index_quality_check(str) -> int:
+    '''This function will take in a string of phred 33 quality scores from index reads as input and determine if the string meets the minimum quality scores
+    or contains an "N" and then return this as either 0, 1 or 2'''
+    tests: Is this string containing the proper characters (phred 33)? Is the passed string non-empty? 
+        input "I" 
+        output "40"
+    if the string contains an "N" (unknown) check:int = 0
+    if the string passes quality check return 1 (met minimum) check:int = 1
+    if the string fails quality check return 2 (did not meet minimum) check:int = 2
+    return check
+
+def biological_quality_checker(str) -> boolean:
+    '''This function will take in a string of quality score characters for a biological read and average them to make sure they meet a minimum of 30
+    returning True if the minimum is met and False otherwise'''
+    loop through the string and convert each character to a quality score and sum them and divide by 101 to get the mean
+    if the mean meets the minimum return True 
+    else return false
+    return boolean value
+
+def append_header(str, str) ->
+    '''This function will accept two strings (two indexes) and append them to the header line of the appropriate fastq files'''
+    concatenate strings one and two 
+    append them to both fastq files that apply (R1/R2 of matched, unmatched or unknowm/failed)
+    test: Did we receive non-empty string? Do we know which fastq files we are writing to?
+
+def reverse_complement(str) -> str:
+    '''This function will return the reverse complement to the input string'''
+    loop through the string and convert each character to its complementary base
+    add the complement to the front of the string to create the reverse
+    test: ATCG == CGAT
+    return(reverse_complement)
+
+-----
+Notes
+-----
+if __name__ == "__main__"
+all my tests I have listed above inside functions
