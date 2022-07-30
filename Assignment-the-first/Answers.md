@@ -13,7 +13,7 @@
 2. Per-base NT distribution
     i. Use markdown to insert your 4 histograms here.
     #Read 1
-    ![alt text](/projects/bgmp/lwallac2/bioinfo/Bi622/Demultiplex/Read1.png)    
+    ![alt text]([/projects/bgmp/lwallac2/bioinfo/Bi622/Demultiplex/Read1.png](https://github.com/Logan-Wallace/Demultiplex/blob/master/Read1.png?raw=true))    
     #Read 2
     ![Read2](https://user-images.githubusercontent.com/107602241/181381885-34874444-e5a8-485c-ac10-a0623de47bd3.png)
     
