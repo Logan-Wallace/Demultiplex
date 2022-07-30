@@ -13,7 +13,7 @@
 2. Per-base NT distribution
     i. Use markdown to insert your 4 histograms here.
     #Read 1
-    ![alt text]([/projects/bgmp/lwallac2/bioinfo/Bi622/Demultiplex/Read1.png](https://github.com/Logan-Wallace/Demultiplex/blob/master/Read1.png?raw=true))    
+    
     #Read 2
     ![Read2](https://user-images.githubusercontent.com/107602241/181381885-34874444-e5a8-485c-ac10-a0623de47bd3.png)
     
@@ -21,7 +21,7 @@
     ![Read3](https://user-images.githubusercontent.com/107602241/181381905-73152b12-b336-4120-8965-90df199fb039.png)
     
     #Read 4
-    /projects/bgmp/lwallac2/bioinfo/Bi622/Demultiplex/Read4.png    
+    ![Alt text](projects/bgmp/lwallac2/bioinfo/Bi622/Demultiplex/Read4.png "Read 4")   
     ii. Q30 is a standard cutoff score when sequencing and is also suggested to be a good minimum by Illumna 
     themselves. 
     It would mean an error rate in base calls of 1/1,000. Between coverage and the fact that our biological reads are 
