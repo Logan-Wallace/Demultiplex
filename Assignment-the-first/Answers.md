@@ -21,7 +21,8 @@
     ![Read3](https://user-images.githubusercontent.com/107602241/181381905-73152b12-b336-4120-8965-90df199fb039.png)
     
     #Read 4
-    ![Alt text](projects/bgmp/lwallac2/bioinfo/Bi622/Demultiplex/Read4.png "Read 4")   
+    ![Alt text](projects/bgmp/lwallac2/bioinfo/Bi622/Demultiplex/Read4.png "Read 4")
+      projects/bgmp/lwallac2/bioinfo/Bi622/Demultiplex/Read4.png
     ii. Q30 is a standard cutoff score when sequencing and is also suggested to be a good minimum by Illumna 
     themselves. 
     It would mean an error rate in base calls of 1/1,000. Between coverage and the fact that our biological reads are 
