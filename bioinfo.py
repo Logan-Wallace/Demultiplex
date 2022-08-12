@@ -112,17 +112,17 @@ def init_list(lst: list, value: float=0.0) -> list:
 
 
 
-def populate_list(file: str) -> tuple[list, int]:
+def populate_list(file: str):
     #This function will return an array and a counter that will 
-    #store quality score sums for each position of a read
+    #store quality score sums for each position of a read in a fastq file
     #create an empty list with init list
     q_list: list = []
     q_list = init_list(q_list)
     lcount: int = 0
-    #import the gzip module so we can read zipped files without unzipping them previously
-    import gzip
+    # #import the gzip module so we can read zipped files without unzipping them previously
+    # import gzip
     #open our fastq file as 'fh'   
-    with gzip.open(file, "rt") as fh:
+    with open(file, "r") as fh:
     #for all the lines in fh 
         for line in fh:
         #increment a line counter for each line read
@@ -133,7 +133,7 @@ def populate_list(file: str) -> tuple[list, int]:
                 for i in range(len(line.strip())):
                 #add the value of the phred score to that position in q_list
                     q_list[i] += convert_phred(line[i])
-    return(q_list, lcount)
+    return (q_list, lcount)
 
 
 
@@ -218,4 +218,3 @@ if __name__ == "__main__":
     print("Correctly identified a DNA string")
     assert validate_DNA_seq("Hi there!") == False, "Non-DNA identified as DNA"
     print("Correctly determined non-DNA")
-    
