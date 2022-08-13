@@ -1,5 +1,5 @@
-Index Cuttoff Score (Per Base): 25
-Biological Cuttoff Score (Read Average): 0
+Index Cuttoff Score (Per Base): 25. 
+Biological Cuttoff Score (Read Average): 0. 
 Number of matched reads: 265250294
 Number of hopped reads: 415789
 Number of unknown reads: 97580652
